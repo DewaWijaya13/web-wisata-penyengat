@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makam Raja-raja Riau - Warisan Kerajaan Pulau Penyengat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+        
+        .royal-title {
+            font-family: "Playfair Display", serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2c1810 0%, #8b4513 50%, #daa520 100%);
+        }
+        
+        .royal-pattern {
+            background-image: url("/assets/Makam\ Raja-raja\ Riau.jpg");
+            background-size: cover;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .tomb-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .tomb-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(218, 165, 32, 0.2);
+            border-color: #daa520;
+        }
+        
+        .back-btn {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .sultan-crown {
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #daa520);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .royal-divider {
+            background: linear-gradient(90deg, transparent, #daa520, transparent);
+            height: 2px;
+        }
+        
+        .tomb-number {
+            background: linear-gradient(135deg, #daa520, #ffd700);
+            color: #2c1810;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+        }
+        
+        .interactive-map {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px dashed #daa520;
+            transition: all 0.3s ease;
+        }
+        
+        .interactive-map:hover {
+            border-style: solid;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        }
+        
+        .dynasty-badge {
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            color: #ffd700;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid #daa520;
+        }
+        
+        .reign-period {
+            background: rgba(218, 165, 32, 0.1);
+            color: #8b4513;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(218, 165, 32, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Back Button -->
+    <div class="fixed top-6 left-6 z-50">
+        <button 
+            onclick="window.location.href='../index.html#wisata'" 
+            class="back-btn bg-black bg-opacity-20 text-white p-3 rounded-full shadow-lg hover:bg-opacity-30 flex items-center space-x-2 group"
+        >
+            <i data-feather="arrow-left" class="w-5 h-5"></i>
+            <span class="hidden group-hover:inline-block text-sm font-medium pr-2">Kembali</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden royal-pattern">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white mb-16">
+                <div class="scroll-reveal">
+                    <div class="inline-flex items-center justify-center w-24 h-24 glass-card rounded-full mb-8">
+                        <i data-feather="crown" class="w-12 h-12 text-yellow-400"></i>
+                    </div>
+                    <h1 class="royal-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        Makam <span class="sultan-crown">Raja-raja Riau</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 leading-relaxed">
+                        Kompleks Pemakaman Bersejarah Para Sultan dan Keluarga Kerajaan Riau-Lingga
+                    </p>
+                    <div class="royal-divider w-32 mx-auto mb-8"></div>
+                    <p class="text-lg opacity-80 max-w-2xl mx-auto">
+                        Jejak Kemegahan Dinasti Melayu yang Diabadikan dalam Batu Nisan Bersejarah
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Hero Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="scroll-reveal glass-card rounded-xl p-6 text-center text-white">
+                    <i data-feather="users" class="w-8 h-8 text-yellow-400 mx-auto mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">12+</h3>
+                    <p class="opacity-80">Sultan & Keluarga</p>
+                </div>
+                <div class="scroll-reveal glass-card rounded-xl p-6 text-center text-white">
+                    <i data-feather="calendar" class="w-8 h-8 text-yellow-400 mx-auto mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">1780-1911</h3>
+                    <p class="opacity-80">Periode Pemakaman</p>
+                </div>
+                <div class="scroll-reveal glass-card rounded-xl p-6 text-center text-white">
+                    <i data-feather="map" class="w-8 h-8 text-yellow-400 mx-auto mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">5</h3>
+                    <p class="opacity-80">Lokasi Kompleks</p>
+                </div>
+                <div class="scroll-reveal glass-card rounded-xl p-6 text-center text-white">
+                    <i data-feather="clock" class="w-8 h-8 text-yellow-400 mx-auto mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">250+</h3>
+                    <p class="opacity-80">Tahun Sejarah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <div class="scroll-reveal">
+                    <h2 class="royal-title text-4xl font-bold text-gray-800 mb-6">
+                        Warisan <span class="text-yellow-600">Kerajaan Abadi</span>
+                    </h2>
+                    <div class="royal-divider w-24 mx-auto mb-8"></div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Pulau Penyengat tidak hanya menjadi pusat pemerintahan Kesultanan Riau-Lingga, 
+                        tetapi juga menjadi tempat peristirahatan terakhir para sultan dan keluarga kerajaan. 
+                        Kompleks makam yang tersebar di berbagai lokasi ini menyimpan cerita tentang kemegahan, 
+                        kekuasaan, dan warisan budaya Melayu yang tak terlupakan.
+                    </p>
+                </div>
+                
+                <div class="scroll-reveal grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="book-open" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Sejarah Terpelihara</h3>
+                        <p class="text-gray-600 text-sm">Nisan dan prasasti yang masih terbaca dengan jelas</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="shield" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Situs Terlindungi</h3>
+                        <p class="text-gray-600 text-sm">Dilestarikan sebagai cagar budaya nasional</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="heart" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ziarah Spiritual</h3>
+                        <p class="text-gray-600 text-sm">Tempat berziarah dan mengenang sejarah</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Royal Tombs Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="scroll-reveal text-center mb-16">
+                    <h2 class="royal-title text-4xl font-bold text-gray-800 mb-6">
+                        Para <span class="text-yellow-600">Sultan Terkemuka</span>
+                    </h2>
+                    <div class="royal-divider w-24 mx-auto mb-8"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Kisah hidup dan warisan para sultan yang dimakamkan di Pulau Penyengat
+                    </p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Sultan Mahmud Riayat Syah -->
+                    <div class="scroll-reveal tomb-card rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                          <!-- KONTEN KIRI -->
+                          <div>
+                            <div class="flex items-start space-x-4 mb-6">
+                              <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                <i data-feather="crown" class="w-6 h-6 text-yellow-600"></i>
+                              </div>
+                              <div>
+                                <div class="dynasty-badge mb-3">Sultan Riau-Lingga IV</div>
+                                <h3 class="royal-title text-2xl font-bold text-gray-800 mb-2">
+                                  Sultan Mahmud Riayat Syah
+                                </h3>
+                                <div class="reign-period inline-block mb-4">Memerintah: 1761-1812</div>
+                              </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                              Sultan yang memerintah selama 51 tahun ini dikenal sebagai pemimpin yang bijaksana dan memajukan perdagangan. 
+                              Makamnya terletak di kompleks utama dengan nisan berukir kaligrafi Arab yang indah. 
+                              Beliau adalah ayah dari Sultan Abdul Rahman Muazzam Syah yang membangun Masjid Raya Sultan Riau.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="bg-yellow-50 p-4 rounded-lg">
+                                <div class="text-sm text-gray-600">Periode Kekuasaan</div>
+                                <div class="font-semibold text-gray-800">51 Tahun</div>
+                              </div>
+                              <div class="bg-yellow-50 p-4 rounded-lg">
+                                <div class="text-sm text-gray-600">Warisan Utama</div>
+                                <div class="font-semibold text-gray-800">Perdagangan & Diplomasi</div>
+                              </div>
+                            </div>
+                          </div>
+                      
+                          <!-- KONTEN KANAN: GAMBAR MAKAM -->
+                          <div class="flex flex-col items-center lg:items-end space-y-4">
+                            <img 
+                              src="/assets/makam-Sultan Mahmud Riayat Syah.jpg" 
+                              alt="Foto Makam Sultan Mahmud Riayat Syah" 
+                              class="w-full max-w-xs rounded-xl object-cover shadow-lg"
+                            />
+                            <div class="bg-gray-50 p-4 rounded-lg w-full max-w-xs text-center">
+                              <div class="text-sm text-gray-600 mb-2">Lokasi Makam</div>
+                              <div class="font-semibold text-gray-800">Kompleks Utama</div>
+                              <div class="text-sm text-yellow-600">Area Tengah</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>                      
+                    </div>
+
+                    <!-- Sultan Abdul Rahman Muazzam Syah -->
+                    <div class="scroll-reveal tomb-card rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-start space-x-4 mb-6">
+                                    <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                        <i data-feather="crown" class="w-6 h-6 text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="dynasty-badge mb-3">Sultan Riau-Lingga V</div>
+                                        <h3 class="royal-title text-2xl font-bold text-gray-800 mb-2">
+                                            Sultan Abdul Rahman Muazzam Syah
+                                        </h3>
+                                        <div class="reign-period inline-block mb-4">Memerintah: 1812-1832</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    Putra dari Sultan Mahmud Riayat Syah yang membangun Masjid Raya Sultan Riau. 
+                                    Beliau dikenal sebagai sultan yang religius dan peduli terhadap pengembangan arsitektur Islam. 
+                                    Makamnya berdekatan dengan masjid yang dibangunnya, dengan nisan yang dihiasi kaligrafi yang sangat indah.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Warisan Terkenal</div>
+                                        <div class="font-semibold text-gray-800">Masjid Raya Sultan Riau</div>
+                                    </div>
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Karakter</div>
+                                        <div class="font-semibold text-gray-800">Religius & Arsitek</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center lg:text-right">
+                                <div class="flex flex-col items-center lg:items-end space-y-4">
+                                    <img 
+                                      src="/assets/makamSultan Abdul Rahman Muazzam Syah.jpg" 
+                                      alt="Foto Makam Sultan Mahmud Riayat Syah" 
+                                      class="w-full max-w-xs rounded-xl object-cover shadow-lg"
+                                    />
+                                    <div class="bg-gray-50 p-4 rounded-lg w-full max-w-xs text-center">
+                                      <div class="text-sm text-gray-600 mb-2">Lokasi Makam</div>
+                                      <div class="font-semibold text-gray-800">Kompleks Utama</div>
+                                      <div class="text-sm text-yellow-600">Area Utara</div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sultan Mahmud Muzaffar Syah -->
+                    <div class="scroll-reveal tomb-card rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-start space-x-4 mb-6">
+                                    <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                        <i data-feather="crown" class="w-6 h-6 text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="dynasty-badge mb-3">Sultan Riau-Lingga VI</div>
+                                        <h3 class="royal-title text-2xl font-bold text-gray-800 mb-2">
+                                            Sultan Mahmud Muzaffar Syah
+                                        </h3>
+                                        <div class="reign-period inline-block mb-4">Memerintah: 1832-1841</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    Sultan yang memerintah selama masa transisi politik. Makamnya terletak di kompleks keluarga 
+                                    dengan arsitektur nisan yang mencerminkan pengaruh budaya Melayu dan Arab. 
+                                    Beliau dikenal sebagai pemimpin yang berusaha mempertahankan kemerdekaan kerajaan di tengah tekanan kolonial.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Era Kepemimpinan</div>
+                                        <div class="font-semibold text-gray-800">Masa Transisi</div>
+                                    </div>
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Perjuangan</div>
+                                        <div class="font-semibold text-gray-800">Mempertahankan Kemerdekaan</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center lg:text-right">
+                                <div class="text-center lg:text-right">
+                                    <div class="flex flex-col items-center lg:items-end space-y-4">
+                                        <img 
+                                          src="/assets/makam-Sultan Mahmud Muzaffar Syah.jpg" 
+                                          alt="Foto Makam Sultan Mahmud Riayat Syah" 
+                                          class="w-full max-w-xs rounded-xl object-cover shadow-lg"
+                                        />
+                                        <div class="bg-gray-50 p-4 rounded-lg w-full max-w-xs text-center">
+                                          <div class="text-sm text-gray-600 mb-2">Lokasi Makam</div>
+                                          <div class="font-semibold text-gray-800">Kompleks Utama</div>
+                                          <div class="text-sm text-yellow-600">Area Timur</div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <!-- Raja Ali Haji -->
+                    <div class="scroll-reveal tomb-card rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-start space-x-4 mb-6">
+                                    <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                        <i data-feather="book" class="w-6 h-6 text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="dynasty-badge mb-3">Sastrawan & Sejarawan</div>
+                                        <h3 class="royal-title text-2xl font-bold text-gray-800 mb-2">
+                                            Raja Ali Haji
+                                        </h3>
+                                        <div class="reign-period inline-block mb-4">Hidup: 1809-1870</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    Tokoh penting dalam sejarah sastra Melayu, penulis "Tuhfat al-Nafis" dan "Gurindam Dua Belas". 
+                                    Makamnya menjadi tempat ziarah para pelajar dan pecinta sastra. Nisannya bertuliskan ayat-ayat Al-Quran 
+                                    dan syair-syair karya beliau. Dikenal sebagai "Bapak Bahasa Melayu Modern".
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Karya Terkenal</div>
+                                        <div class="font-semibold text-gray-800">Tuhfat al-Nafis</div>
+                                    </div>
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Julukan</div>
+                                        <div class="font-semibold text-gray-800">Bapak Bahasa Melayu</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center lg:text-right">
+                                <div class="text-center lg:text-right">
+                                    <div class="flex flex-col items-center lg:items-end space-y-4">
+                                        <img 
+                                          src="/assets/makam-Raja Ali Haji.jpg" 
+                                          alt="Foto Makam Sultan Mahmud Riayat Syah" 
+                                          class="w-full max-w-xs rounded-xl object-cover shadow-lg"
+                                        />
+                                        <div class="bg-gray-50 p-4 rounded-lg w-full max-w-xs text-center">
+                                          <div class="text-sm text-gray-600 mb-2">Lokasi Makam</div>
+                                          <div class="font-semibold text-gray-800">Kompleks Utama</div>
+                                          <div class="text-sm text-yellow-600">Area Selatan</div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Engku Putri Raja Hamidah -->
+                    <div class="scroll-reveal tomb-card rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                            <div class="lg:col-span-2">
+                                <div class="flex items-start space-x-4 mb-6">
+                                    <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                        <i data-feather="heart" class="w-6 h-6 text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="dynasty-badge mb-3">Permaisuri Kesultanan</div>
+                                        <h3 class="royal-title text-2xl font-bold text-gray-800 mb-2">
+                                            Engku Putri Raja Hamidah
+                                        </h3>
+                                        <div class="reign-period inline-block mb-4">Hidup: 1805-1844</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    Permaisuri Sultan Abdul Rahman Muazzam Syah yang dikenal atas perannya dalam pengembangan pendidikan 
+                                    dan kebudayaan Melayu. Makamnya memiliki arsitektur yang unik dengan hiasan geometris Islam. 
+                                    Beliau juga berperan dalam pelestarian tradisi istana dan adat kerajaan.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Peran Utama</div>
+                                        <div class="font-semibold text-gray-800">Pendidikan & Budaya</div>
+                                    </div>
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <div class="text-sm text-gray-600">Warisan</div>
+                                        <div class="font-semibold text-gray-800">Pelestarian Adat</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center lg:text-right">
+                                <div class="text-center lg:text-right">
+                                    <div class="flex flex-col items-center lg:items-end space-y-4">
+                                        <img 
+                                          src="/assets/makam-Engku Putri Raja Hamidah.jpg" 
+                                          alt="Foto Makam Sultan Mahmud Riayat Syah" 
+                                          class="w-full max-w-xs rounded-xl object-cover shadow-lg"
+                                        />
+                                        <div class="bg-gray-50 p-4 rounded-lg w-full max-w-xs text-center">
+                                          <div class="text-sm text-gray-600 mb-2">Lokasi Makam</div>
+                                          <div class="font-semibold text-gray-800">Kompleks Utama</div>
+                                          <div class="text-sm text-yellow-600">Area Barat</div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Heritage Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="scroll-reveal text-center mb-16">
+                    <h2 class="royal-title text-4xl font-bold text-gray-800 mb-6">
+                        Arsitektur <span class="text-yellow-600">Makam Kerajaan</span>
+                    </h2>
+                    <div class="royal-divider w-24 mx-auto mb-8"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Keunikan arsitektur dan seni ukir yang menggambarkan kemegahan tradisi Islam Melayu
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Nisan Batu -->
+                    <div class="scroll-reveal bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="columns" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Nisan Batu Granit</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">
+                            Nisan dari batu granit dengan ukiran kaligrafi Arab yang indah, menunjukkan keahlian pengrajin lokal
+                        </p>
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <div class="text-xs text-gray-600 mb-1">Tinggi rata-rata</div>
+                            <div class="font-semibold text-gray-800">1.2 - 1.8 meter</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kaligrafi -->
+                    <div class="scroll-reveal bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="edit-3" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Kaligrafi Arab</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">
+                            Ayat-ayat Al-Quran dan doa-doa yang diukir dengan gaya kaligrafi Naskhi dan Tsuluts
+                        </p>
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <div class="text-xs text-gray-600 mb-1">Gaya utama</div>
+                            <div class="font-semibold text-gray-800">Naskhi & Tsuluts</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ornamen -->
+                    <div class="scroll-reveal bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="hexagon" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Motif Geometris</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">
+                            Ornamen geometris Islam yang menghiasi bagian atas dan samping nisan dengan pola rumit
+                        </p>
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <div class="text-xs text-gray-600 mb-1">Pola dominan</div>
+                            <div class="font-semibold text-gray-800">Bintang & Lingkaran</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Preservation Info -->
+                <div class="scroll-reveal mt-16 bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="royal-title text-2xl font-bold text-gray-800 mb-4">
+                                Pelestarian <span class="text-yellow-600">Warisan</span>
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Kompleks makam ini telah ditetapkan sebagai Situs Cagar Budaya Nasional sejak tahun 1993. 
+                                Upaya pelestarian terus dilakukan untuk menjaga keaslian arsitektur dan nilai sejarahnya.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <i data-feather="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span class="text-gray-700">Perawatan rutin nisan dan struktur</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-feather="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span class="text-gray-700">Dokumentasi digital kaligrafi</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-feather="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span class="text-gray-700">Program edukasi sejarah</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gradient-to-br from-green-100 to-green-200 p-8 rounded-xl">
+                                <i data-feather="award" class="w-16 h-16 text-green-600 mx-auto mb-4"></i>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Status Perlindungan</h4>
+                                <div class="inline-block bg-green-500 text-white px-4 py-2 rounded-full font-semibold mb-4">
+                                    Cagar Budaya Nasional
+                                </div>
+                                <p class="text-gray-600 text-sm">
+                                    Dilindungi berdasarkan UU No. 11 Tahun 2010 tentang Cagar Budaya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visiting Information Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="scroll-reveal text-center mb-16">
+                    <h2 class="royal-title text-4xl font-bold text-gray-800 mb-6">
+                        Informasi <span class="text-yellow-600">Kunjungan</span>
+                    </h2>
+                    <div class="royal-divider w-24 mx-auto mb-8"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Panduan lengkap untuk mengunjungi kompleks makam raja-raja Riau di Pulau Penyengat
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Practical Info -->
+                    <div class="scroll-reveal">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Informasi Praktis</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                    <i data-feather="clock" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Jam Kunjungan</h4>
+                                    <p class="text-gray-600">Senin - Minggu: 08:00 - 17:00 WIB</p>
+                                    <p class="text-sm text-gray-500">Tutup saat shalat Jumat (12:00-13:00)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                    <i data-feather="dollar-sign" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Biaya Masuk</h4>
+                                    <p class="text-gray-600">Gratis</p>
+                                    <p class="text-sm text-gray-500">Donasi sukarela untuk pemeliharaan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                    <i data-feather="map-pin" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Lokasi</h4>
+                                    <p class="text-gray-600">Pulau Penyengat, Tanjungpinang</p>
+                                    <p class="text-sm text-gray-500">Akses dengan kapal dari Tanjungpinang</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-yellow-100 p-3 rounded-full flex-shrink-0">
+                                    <i data-feather="users" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Pemandu Wisata</h4>
+                                    <p class="text-gray-600">Tersedia pemandu lokal</p>
+                                    <p class="text-sm text-gray-500">Biaya: Rp 50.000 - 100.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Etiquette & Guidelines -->
+                    <div class="scroll-reveal">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Etika Kunjungan</h3>
+                        <div class="bg-yellow-50 p-6 rounded-lg mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-4 flex items-center">
+                                <i data-feather="heart" class="w-5 h-5 text-yellow-600 mr-2"></i>
+                                Menghormati Tempat Suci
+                            </h4>
+                            <div class="space-y-3 text-sm text-gray-600">
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                                    <span>Berpakaian sopan dan rapi</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                                    <span>Menjaga ketenangan dan tidak bersuara keras</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                                    <span>Tidak menginjak atau menyentuh nisan</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                                    <span>Minta izin sebelum mengambil foto</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-4 flex items-center">
+                                <i data-feather="camera" class="w-5 h-5 text-blue-600 mr-2"></i>
+                                Panduan Fotografi
+                            </h4>
+                            <div class="space-y-3 text-sm text-gray-600">
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                                    <span>Fotografi diperbolehkan untuk dokumentasi</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="x" class="w-4 h-4 text-red-500"></i>
+                                    <span>Tidak menggunakan flash</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="x" class="w-4 h-4 text-red-500"></i>
+                                    <span>Tidak berfoto dengan pose tidak sopan</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                                    <span>Fokus pada aspek arsitektur dan sejarah</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Best Time to Visit -->
+                <div class="scroll-reveal mt-16 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Waktu Terbaik Berkunjung</h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            Pilih waktu yang tepat untuk mendapatkan pengalaman spiritual dan edukasi yang optimal
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="text-center">
+                                <i data-feather="sun" class="w-12 h-12 text-yellow-500 mx-auto mb-3"></i>
+                                <h4 class="font-semibold text-gray-800 mb-2">Pagi Hari</h4>
+                                <p class="text-sm text-gray-600 mb-3">08:00 - 10:00 WIB</p>
+                                <p class="text-xs text-gray-500">Udara sejuk, cahaya natural terbaik untuk foto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="text-center">
+                                <i data-feather="cloud" class="w-12 h-12 text-blue-500 mx-auto mb-3"></i>
+                                <h4 class="font-semibold text-gray-800 mb-2">Sore Hari</h4>
+                                <p class="text-sm text-gray-600 mb-3">15:00 - 17:00 WIB</p>
+                                <p class="text-xs text-gray-500">Suasana tenang, ideal untuk kontemplasi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="text-center">
+                                <i data-feather="calendar" class="w-12 h-12 text-green-500 mx-auto mb-3"></i>
+                                <h4 class="font-semibold text-gray-800 mb-2">Hari Biasa</h4>
+                                <p class="text-sm text-gray-600 mb-3">Senin - Kamis</p>
+                                <p class="text-xs text-gray-500">Lebih sepi, lebih leluasa untuk berziarah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo & Description -->
+          <div class="md:col-span-2">
+            <div class="flex items-center mb-4">
+              <div class="bg-amber-500 p-2 rounded-lg mr-3">
+                <i data-feather="home" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold">Pulau Penyengat</h3>
+            </div>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Jelajahi warisan budaya Melayu yang kaya di Pulau Penyengat. Temukan sejarah, arsitektur, dan tradisi yang telah diwariskan turun-temurun.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="youtube" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+            <ul class="space-y-2">
+              <li><a href="../index.html" class="text-gray-400 hover:text-amber-500 transition-colors">Beranda</a></li>
+              <li><a href="../index.html#tentang" class="text-gray-400 hover:text-amber-500 transition-colors">Tentang</a></li>
+              <li><a href="../index.html#wisata" class="text-gray-400 hover:text-amber-500 transition-colors">Destinasi</a></li>
+              <li><a href="../index.html#panduan" class="text-gray-400 hover:text-amber-500 transition-colors">Panduan</a></li>
+              <li><a href="../index.html#kontak" class="text-gray-400 hover:text-amber-500 transition-colors">Kontak</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i data-feather="map-pin" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">Pulau Penyengat, Tanjungpinang, Kepulauan Riau</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="phone" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">+62 771 123456</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="mail" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">info@pulaupenyengat.id</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Pulau Penyengat. Semua hak dilindungi undang-undang.
+          </p>
+          <div class="flex space-x-6 text-sm">
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Kebijakan Privasi</a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with scroll-reveal class
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Back button functionality
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Add smooth transition effect
+            document.body.style.opacity = '0.8';
+            setTimeout(() => {
+                window.location.href = '../index.html#wisata';
+            }, 200);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sejarah Balai Adat Istana - Pulau Penyengat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+      }
+
+      .content-gradient {
+        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .back-btn {
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(8, 6, 6, 0.2);
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: #fbbf24;
+        border-radius: 50%;
+        border: 3px solid white;
+      }
+
+      .palace-pattern {
+       background-image: url('/assets/Balai\ Adat\ &\ Istana.jpg');
+        background-size: cover;
+      }
+
+      .royal-highlight {
+        background: linear-gradient(45deg, #fbbf24, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .function-card {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .function-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        transition: left 0.5s;
+      }
+
+      .function-card:hover::before {
+        left: 100%;
+      }
+
+      .function-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      }
+
+      .crown-icon {
+        background: linear-gradient(45deg, #fbbf24, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Timeline styling dengan warna #fbbf24 */
+      .timeline-line {
+        background-color: #fbbf24;
+      }
+
+      .timeline-card {
+        border-left-color: #fbbf24;
+      }
+
+      .timeline-badge {
+        background-color: #fef3c7;
+        color: #92400e;
+      }
+
+      .ceremonial-bg {
+        background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+      }
+
+      .royal-card {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Back Button -->
+    <div class="fixed top-6 left-6 z-50">
+      <button
+        onclick="window.location.href='../index.html#wisata'"
+        class="back-btn bg-black bg-opacity-20 text-white p-3 rounded-full shadow-lg hover:bg-opacity-30 flex items-center space-x-2 group"
+      >
+        <i data-feather="arrow-left" class="w-5 h-5"></i>
+        <span class="hidden group-hover:inline-block text-sm font-medium pr-2"
+          >Kembali</span
+        >
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden palace-pattern"
+      id="hero-section"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center text-white mb-12">
+          <div class="scroll-reveal">
+            <div
+              class="inline-flex items-center justify-center w-20 h-20 bg-yellow-400 rounded-full mb-6 shadow-2xl"
+            >
+              <i data-feather="home" class="w-10 h-10 text-gray-800"></i>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Balai Adat <span class="text-yellow-400">Istana</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+              Pusat Pemerintahan dan Adat Kesultanan Riau-Lingga
+            </p>
+          </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="calendar"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">1804</h3>
+            <p class="opacity-80">Tahun Pembangunan</p>
+          </div>
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="users"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">8</h3>
+            <p class="opacity-80">Sultan yang Memerintah</p>
+          </div>
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+            >
+            <i
+              data-feather="layers"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">3</h3>
+            <p class="opacity-80">Tingkat Bangunan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Content -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- Introduction -->
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Pusat <span class="royal-highlight">Pemerintahan</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Balai Adat Istana merupakan jantung pemerintahan Kesultanan Riau-Lingga di Pulau Penyengat. Sebagai pusat administrasi dan ceremonial, istana ini menjadi saksi perjalanan sejarah kerajaan Melayu yang megah.
+            </p>
+          </div>
+
+          <div
+            class="scroll-reveal ceremonial-bg rounded-2xl p-8 shadow-lg"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-amber-600 p-3 rounded-full flex-shrink-0">
+                <i data-feather="crown" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">
+                  Arsitektur Kerajaan
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Dibangun dengan arsitektur Melayu tradisional yang memadukan unsur lokal dan pengaruh Eropa, istana ini mencerminkan kemegahan dan kearifan budaya Riau. Setiap detail bangunan memiliki makna filosofis yang mendalam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Perjalanan <span class="royal-highlight">Kerajaan</span>
+            </h2>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute left-8 top-0 bottom-0 w-0.5 timeline-line"
+            ></div>
+
+            <div class="space-y-12">
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1804</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Pembangunan Istana
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Sultan Mahmud Riayat Syah III membangun istana sebagai pusat pemerintahan baru di Pulau Penyengat. Pemilihan lokasi ini strategis untuk mengontrol perdagangan di Selat Malaka.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1812</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Era Keemasan
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Di masa pemerintahan Raja Ali Haji, istana menjadi pusat kebudayaan dan pendidikan. Berbagai karya sastra dan hukum adat lahir dari istana ini.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1844</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Pusat Diplomasi
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Istana menjadi tempat berlangsungnya berbagai perjanjian diplomatik dengan kerajaan-kerajaan tetangga dan kekuatan kolonial Eropa.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1885</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Tekanan Kolonial
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Belanda mulai meningkatkan kontrol atas kesultanan. Istana masih berfungsi sebagai pusat pemerintahan namun dengan kekuasaan yang terbatas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1911</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Berakhirnya Kesultanan
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Kesultanan Riau-Lingga resmi dihapuskan oleh Belanda. Istana kehilangan fungsi politiknya namun tetap menjadi simbol budaya Melayu.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1980-Sekarang</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Pelestarian Warisan
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Pemerintah Indonesia menetapkan kompleks istana sebagai cagar budaya. Upaya restorasi dan pelestarian terus dilakukan untuk generasi mendatang.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Functions Section -->
+        <div class="max-w-6xl mx-auto">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Fungsi <span class="royal-highlight">Istana</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="scroll-reveal function-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="royal-card p-6 text-center"
+              >
+                <i
+                  data-feather="briefcase"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Pusat Pemerintahan</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Tempat Sultan dan keluarga kerajaan menjalankan tugas administratif dan mengambil keputusan penting bagi kesultanan.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal function-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-center"
+              >
+                <i
+                  data-feather="users"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Balai Pengadilan</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Tempat berlangsungnya sidang pengadilan adat dan penyelesaian sengketa berdasarkan hukum Islam dan adat Melayu.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal function-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-green-500 to-green-600 p-6 text-center"
+              >
+                <i
+                  data-feather="book"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Pusat Pendidikan</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Tempat para ulama dan cendekiawan mengajar ilmu agama, sastra, dan pengetahuan umum kepada bangsawan dan rakyat.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal function-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-red-500 to-red-600 p-6 text-center"
+              >
+                <i
+                  data-feather="calendar"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Upacara Adat</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Venue untuk berbagai upacara kerajaan seperti penobatan, pernikahan, dan perayaan hari-hari besar Islam.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal function-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-yellow-500 to-orange-500 p-6 text-center"
+              >
+                <i
+                  data-feather="globe"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Diplomasi</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Tempat menerima utusan dari kerajaan lain dan menjalankan hubungan diplomatik dengan kekuatan regional.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal function-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-pink-500 to-pink-600 p-6 text-center"
+              >
+                <i
+                  data-feather="heart"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Tempat Tinggal</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Kediaman resmi Sultan dan keluarga kerajaan dengan ruang-ruang pribadi yang mewah dan nyaman.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cultural Importance -->
+          <div class="scroll-reveal mt-16 ceremonial-bg rounded-2xl p-8 shadow-lg">
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Makna Budaya Istana</h3>
+              <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Balai Adat Istana bukan hanya bangunan fisik, tetapi juga representasi dari nilai-nilai luhur budaya Melayu. Setiap ruangan memiliki makna simbolis yang mencerminkan filosofi hidup dan tata kelola pemerintahan yang adil.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold text-lg text-gray-800 mb-3">Pusat Kebudayaan</h4>
+                <p class="text-gray-600">Tempat lahirnya karya-karya sastra klasik Melayu dan pusat pengembangan seni budaya tradisional.</p>
+              </div>
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold text-lg text-gray-800 mb-3">Simbol Kedaulatan</h4>
+                <p class="text-gray-600">Lambang kekuasaan dan martabat Kesultanan Riau-Lingga di mata dunia internasional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Arsitektur <span class="royal-highlight">Istana</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="scroll-reveal">
+              <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Ciri Khas Bangunan</h3>
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <div class="bg-amber-500 p-2 rounded-full flex-shrink-0">
+                      <i data-feather="triangle" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">Atap Limas</h4>
+                      <p class="text-gray-600 text-sm">Atap berbentuk limas yang melambangkan keagungan dan spiritualitas</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="bg-amber-500 p-2 rounded-full flex-shrink-0">
+                      <i data-feather="columns" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">Tiang Kayu Ulin</h4>
+                      <p class="text-gray-600 text-sm">Menggunakan kayu ulin pilihan yang tahan rayap dan cuaca</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="bg-amber-500 p-2 rounded-full flex-shrink-0">
+                      <i data-feather="flower" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">Ukiran Tradisional</h4>
+                      <p class="text-gray-600 text-sm">Hiasan ukiran khas Melayu dengan motif flora dan kaligrafi</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="bg-amber-500 p-2 rounded-full flex-shrink-0">
+                      <i data-feather="wind" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">Ventilasi Alami</h4>
+                      <p class="text-gray-600 text-sm">Desain yang memungkinkan sirkulasi udara optimal untuk iklim tropis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="scroll-reveal">
+              <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Tata Ruang Istana</h3>
+                <div class="space-y-6">
+                  <div class="border-l-4 border-amber-500 pl-4">
+                    <h4 class="font-bold text-gray-800">Balairung Seri</h4>
+                    <p class="text-gray-600 text-sm">Ruang utama untuk upacara resmi dan penerimaan tamu negara</p>
+                  </div>
+                  <div class="border-l-4 border-blue-500 pl-4">
+                    <h4 class="font-bold text-gray-800">Mahligai</h4>
+                    <p class="text-gray-600 text-sm">Ruang pribadi Sultan dan keluarga dengan tingkat privasi tinggi</p>
+                  </div>
+                  <div class="border-l-4 border-green-500 pl-4">
+                    <h4 class="font-bold text-gray-800">Balai Penghadapan</h4>
+                    <p class="text-gray-600 text-sm">Tempat Sultan menerima laporan dan mengadakan rapat dengan menteri</p>
+                  </div>
+                  <div class="border-l-4 border-purple-500 pl-4">
+                    <h4 class="font-bold text-gray-800">Pelataran</h4>
+                    <p class="text-gray-600 text-sm">Area terbuka untuk upacara besar dan berkumpulnya rakyat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+ <!-- CTA Section -->
+ <section class="content-gradient py-20 relative overflow-hidden">
+    <div class="absolute inset-0 palace-pattern opacity-20"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <div class="scroll-reveal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Rasakan Kemegahan <span class="text-blue-900">Istana</span>
+          </h2>
+          <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+            Jelajahi warisan budaya yang tak ternilai dan saksikan langsung arsitektur kerajaan yang menawan di Pulau Penyengat
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              onclick="window.location.href='../index.html#wisata'"
+              class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center space-x-2"
+            >
+              <i data-feather="map-pin" class="w-5 h-5"></i>
+              <span>Kunjungi Sekarang</span>
+            </button>
+            <button
+              onclick="window.location.href='../index.html#panduan'"
+              class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2"
+            >
+              <i data-feather="camera" class="w-5 h-5"></i>
+              <span>Galeri Foto</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info Cards -->
+      <div class="max-w-6xl mx-auto mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300">
+            <i data-feather="clock" class="w-8 h-8 mx-auto mb-4 text-blue-900"></i>
+            <h3 class="text-lg font-bold mb-2">Jam Buka</h3>
+            <p class="opacity-90">08:00 - 17:00 WIB</p>
+            <p class="text-sm opacity-75">Setiap Hari</p>
+          </div>
+          <div class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300">
+            <i data-feather="dollar-sign" class="w-8 h-8 mx-auto mb-4 text-blue-900"></i>
+            <h3 class="text-lg font-bold mb-2">Tiket Masuk</h3>
+            <p class="opacity-90">Gratis</p>
+            <p class="text-sm opacity-75">Untuk Umum</p>
+          </div>
+          <div class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white hover:bg-white hover:bg-opacity-20 transition-all duration-300">
+            <i data-feather="phone" class="w-8 h-8 mx-auto mb-4 text-blue-900"></i>
+            <h3 class="text-lg font-bold mb-2">Informasi</h3>
+            <p class="opacity-90">+62 771 123456</p>
+            <p class="text-sm opacity-75">Kontak Wisata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Content -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="scroll-reveal text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Jelajahi <span class="royal-highlight">Destinasi Lainnya</span>
+          </h2>
+          <p class="text-gray-600">Temukan keajaiban lain di Pulau Penyengat</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="scroll-reveal bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-gradient-to-r from-green-500 to-emerald-600 h-48 flex items-center justify-center">
+              <i data-feather="home" class="w-16 h-16 text-white"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Masjid Raya Sultan Riau</h3>
+              <p class="text-gray-600 mb-4">Masjid bersejarah dengan arsitektur Melayu yang memukau</p>
+              <button 
+                onclick="window.location.href='../index.html#wisata'"
+                class="text-green-600 font-semibold hover:text-green-700 transition-colors flex items-center space-x-2"
+              >
+                <span>Pelajari Lebih Lanjut</span>
+                <i data-feather="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="scroll-reveal bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-48 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Makam Raja Ali Haji</h3>
+              <p class="text-gray-600 mb-4">Peristirahatan terakhir tokoh sastra Melayu terkenal</p>
+              <button 
+                onclick="window.location.href='../index.html#wisata'"
+                class="text-purple-600 font-semibold hover:text-purple-700 transition-colors flex items-center space-x-2"
+              >
+                <span>Pelajari Lebih Lanjut</span>
+                <i data-feather="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="scroll-reveal bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+              <i data-feather="anchor" class="w-16 h-16 text-white"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Pelabuhan Tradisional</h3>
+              <p class="text-gray-600 mb-4">Gerbang masuk ke pulau dengan pemandangan laut yang indah</p>
+              <button 
+                onclick="window.location.href='../index.html#wisata'"
+                class="text-blue-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2"
+              >
+                <span>Pelajari Lebih Lanjut</span>
+                <i data-feather="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo & Description -->
+          <div class="md:col-span-2">
+            <div class="flex items-center mb-4">
+              <div class="bg-amber-500 p-2 rounded-lg mr-3">
+                <i data-feather="home" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold">Pulau Penyengat</h3>
+            </div>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Jelajahi warisan budaya Melayu yang kaya di Pulau Penyengat. Temukan sejarah, arsitektur, dan tradisi yang telah diwariskan turun-temurun.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="youtube" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+            <ul class="space-y-2">
+              <li><a href="../index.html" class="text-gray-400 hover:text-amber-500 transition-colors">Beranda</a></li>
+              <li><a href="../index.html#tentang" class="text-gray-400 hover:text-amber-500 transition-colors">Tentang</a></li>
+              <li><a href="../index.html#wisata" class="text-gray-400 hover:text-amber-500 transition-colors">Destinasi</a></li>
+              <li><a href="../index.html#panduan" class="text-gray-400 hover:text-amber-500 transition-colors">Panduan</a></li>
+              <li><a href="../index.html#kontak" class="text-gray-400 hover:text-amber-500 transition-colors">Kontak</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i data-feather="map-pin" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">Pulau Penyengat, Tanjungpinang, Kepulauan Riau</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="phone" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">+62 771 123456</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="mail" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">info@pulaupenyengat.id</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Pulau Penyengat. Semua hak dilindungi undang-undang.
+          </p>
+          <div class="flex space-x-6 text-sm">
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Kebijakan Privasi</a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Feather Icons
+    feather.replace();
+
+    // Scroll reveal animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with scroll-reveal class
+    document.querySelectorAll(".scroll-reveal").forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Staggered animation for timeline items
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    timelineItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.2}s`;
+    });
+
+    // Staggered animation for function cards
+    const functionCards = document.querySelectorAll(".function-card");
+    functionCards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+
+    // Back button hover effect
+    const backBtn = document.querySelector(".back-btn");
+    if (backBtn) {
+      backBtn.addEventListener("mouseenter", () => {
+        feather.replace();
+      });
+    }
+
+    // Modified parallax effect - reduced speed to prevent content overlap
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroSection = document.querySelector('#hero-section');
+      const rate = scrolled * -0.3; // Reduced from 0.5 to -0.3 and made negative
+      
+      if (heroSection && scrolled < window.innerHeight) {
+        heroSection.style.transform = `translateY(${rate}px)`;
+      }
+    });
+
+    // Add subtle animations to cards on scroll
+    const cards = document.querySelectorAll('.function-card, .timeline-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    cards.forEach((card) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      cardObserver.observe(card);
+    });
+
+    // Add smooth hover effects for related content cards
+    const relatedCards = document.querySelectorAll('.scroll-reveal.bg-white');
+    relatedCards.forEach((card) => {
+      card.addEventListener('mouseover', () => {
+        card.style.transform = 'translateY(-8px)';
+      });
+      card.addEventListener('mouseout', () => {
+        card.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+</body>
+</html>

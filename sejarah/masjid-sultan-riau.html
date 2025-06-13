@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sejarah Masjid Sultan Riau - Pulau Penyengat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .content-gradient {
+        background: linear-gradient(135deg, #fbeb93 0%, #af863e 100%);
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .back-btn {
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(8, 6, 6, 0.2);
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: #fbbf24;
+        border-radius: 50%;
+        border: 3px solid white;
+      }
+
+      .mosque-pattern {
+        background-image: url("/assets/Masjid\ Raya\ Sultan\ Riau2.jpg");
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Back Button -->
+    <div class="fixed top-6 left-6 z-50">
+      <button
+        onclick="window.location.href='../index.html#wisata'"
+        class="back-btn bg-black bg-opacity-20 text-white p-3 rounded-full shadow-lg hover:bg-opacity-30 flex items-center space-x-2 group"
+      >
+        <i data-feather="arrow-left" class="w-5 h-5"></i>
+        <span class="hidden group-hover:inline-block text-sm font-medium pr-2"
+          >Kembali</span
+        >
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden mosque-pattern"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center text-white mb-12">
+          <div class="scroll-reveal">
+            <div
+              class="inline-flex items-center justify-center w-20 h-20 bg-yellow-400 rounded-full mb-6"
+            >
+              <i data-feather="monument" class="w-10 h-10 text-gray-800"></i>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Masjid Raya <span class="text-yellow-400">Sultan Riau</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+              Warisan Arsitektur Melayu Klasik yang Memukau
+            </p>
+          </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="calendar"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">1844</h3>
+            <p class="opacity-80">Tahun Pembangunan</p>
+          </div>
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="users"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">500+</h3>
+            <p class="opacity-80">Kapasitas Jamaah</p>
+          </div>
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="award"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">180+</h3>
+            <p class="opacity-80">Tahun Berdiri</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Content -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- Introduction -->
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Sejarah <span class="text-yellow-500">Pembangunan</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Masjid Raya Sultan Riau merupakan salah satu peninggalan
+              bersejarah yang paling berharga di Pulau Penyengat. Dibangun pada
+              masa kejayaan Kesultanan Riau-Lingga, masjid ini menjadi simbol
+              kemegahan arsitektur Melayu klasik.
+            </p>
+          </div>
+
+          <div
+            class="scroll-reveal bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-yellow-400 p-3 rounded-full flex-shrink-0">
+                <i data-feather="info" class="w-6 h-6 text-gray-800"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">
+                  Fakta Menarik
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Masjid ini dibangun menggunakan putih telur sebagai perekat
+                  batu bata, teknik konstruksi tradisional yang membuatnya tetap
+                  kokoh hingga kini. Kubah dan menara masjid menjadi landmark
+                  yang dapat dilihat dari kejauhan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Perjalanan <span class="text-yellow-500">Sejarah</span>
+            </h2>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute left-8 top-0 bottom-0 w-0.5 bg-yellow-400"
+            ></div>
+
+            <div class="space-y-12">
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-400"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold"
+                      >1844</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Pembangunan Dimulai
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Atas perintah Sultan Abdurrahman Muazzam Syah, pembangunan
+                    masjid dimulai dengan melibatkan arsitek dan tukang terbaik
+                    dari berbagai daerah di Nusantara.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-400"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold"
+                      >1850</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Peresmian Masjid
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Setelah 6 tahun pembangunan, masjid diresmikan dengan
+                    upacara besar yang dihadiri oleh Sultan dan para pembesar
+                    kerajaan dari berbagai wilayah.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-400"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold"
+                      >1900-1950</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Masa Kolonial
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Meskipun dalam masa penjajahan, masjid tetap berfungsi
+                    sebagai pusat kegiatan keagamaan dan pendidikan Islam bagi
+                    masyarakat Pulau Penyengat.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-400"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold"
+                      >1980-2000</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Renovasi dan Pemeliharaan
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Pemerintah melakukan renovasi besar-besaran untuk
+                    mempertahankan keaslian arsitektur sambil memperkuat
+                    struktur bangunan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-400"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold"
+                      >2010-Sekarang</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Destinasi Wisata Religi
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Masjid menjadi salah satu destinasi wisata religi dan budaya
+                    utama di Kepulauan Riau, menarik ribuan pengunjung setiap
+                    tahunnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architecture Section -->
+        <div class="max-w-6xl mx-auto">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Keunikan <span class="text-yellow-500">Arsitektur</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="scroll-reveal bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-yellow-400 to-orange-400 p-6 text-center"
+              >
+                <i
+                  data-feather="circle"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Kubah Utama</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Kubah utama bergaya Melayu dengan ornamen kaligrafi Arab yang
+                  indah, melambangkan kemegahan arsitektur Islam Nusantara.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-green-400 to-blue-400 p-6 text-center"
+              >
+                <i
+                  data-feather="triangle"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Menara Masjid</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Menara setinggi 25 meter dengan desain octagonal yang unik,
+                  menjadi landmark yang dapat terlihat dari berbagai sudut
+                  pulau.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-purple-400 to-pink-400 p-6 text-center"
+              >
+                <i
+                  data-feather="columns"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Tiang Penyangga</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Tiang-tiang kayu jati dengan ukiran tradisional Melayu yang
+                  rumit, menopang struktur utama dengan kokoh dan artistik.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-gradient py-20 relative overflow-hidden">
+      <div class="absolute inset-0 mosque-pattern opacity-10"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="scroll-reveal">
+            <h2 class="text-4xl font-bold mb-6">
+              Kunjungi Masjid Bersejarah Ini
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+              Rasakan atmosfer spiritual dan kemegahan arsitektur Melayu klasik
+              yang telah bertahan selama lebih dari 180 tahun
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <button
+                onclick="window.location.href='../index.html#wisata'"
+                class="bg-white text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg flex items-center space-x-2"
+              >
+                <i data-feather="map-pin" class="w-5 h-5"></i>
+                <span>Lihat Lokasi</span>
+              </button>
+              <button
+                onclick="window.location.href='../index.html#panduan'"
+                class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-colors duration-300 flex items-center space-x-2"
+              >
+                <i data-feather="info" class="w-5 h-5"></i>
+                <span>Panduan Kunjungan</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo & Description -->
+          <div class="md:col-span-2">
+            <div class="flex items-center mb-4">
+              <div class="bg-amber-500 p-2 rounded-lg mr-3">
+                <i data-feather="home" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold">Pulau Penyengat</h3>
+            </div>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Jelajahi warisan budaya Melayu yang kaya di Pulau Penyengat. Temukan sejarah, arsitektur, dan tradisi yang telah diwariskan turun-temurun.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="youtube" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+            <ul class="space-y-2">
+              <li><a href="../index.html" class="text-gray-400 hover:text-amber-500 transition-colors">Beranda</a></li>
+              <li><a href="../index.html#tentang" class="text-gray-400 hover:text-amber-500 transition-colors">Tentang</a></li>
+              <li><a href="../index.html#wisata" class="text-gray-400 hover:text-amber-500 transition-colors">Destinasi</a></li>
+              <li><a href="../index.html#panduan" class="text-gray-400 hover:text-amber-500 transition-colors">Panduan</a></li>
+              <li><a href="../index.html#kontak" class="text-gray-400 hover:text-amber-500 transition-colors">Kontak</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i data-feather="map-pin" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">Pulau Penyengat, Tanjungpinang, Kepulauan Riau</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="phone" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">+62 771 123456</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="mail" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">info@pulaupenyengat.id</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Pulau Penyengat. Semua hak dilindungi undang-undang.
+          </p>
+          <div class="flex space-x-6 text-sm">
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Kebijakan Privasi</a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+      // Initialize Feather Icons
+      feather.replace();
+
+      // Scroll reveal animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with scroll-reveal class
+      document.querySelectorAll(".scroll-reveal").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Staggered animation for timeline items
+      const timelineItems = document.querySelectorAll(".timeline-item");
+      timelineItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Back button hover effect
+      const backBtn = document.querySelector(".back-btn");
+      backBtn.addEventListener("mouseenter", () => {
+        feather.replace();
+      });
+    </script>
+  </body>
+</html>

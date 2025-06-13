@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sejarah Benteng Bukit Kursi - Pulau Penyengat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .content-gradient {
+        background: linear-gradient(135deg, #fbeb93 0%, #af863e 100%);
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .back-btn {
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(8, 6, 6, 0.2);
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: #fbbf24;
+        border-radius: 50%;
+        border: 3px solid white;
+      }
+
+      .fortress-pattern {
+        background-image: url('/assets/Benteng\ Bukit\ Kursi.jpg');
+        background-size: cover;
+      }
+
+      .strategic-highlight {
+        background: linear-gradient(45deg, #fbbf24, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .defense-card {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .defense-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        transition: left 0.5s;
+      }
+
+      .defense-card:hover::before {
+        left: 100%;
+      }
+
+      .defense-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      }
+
+      .cannon-icon {
+        background: linear-gradient(45deg, #dc2626, #b91c1c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Timeline styling dengan warna #fbbf24 */
+      .timeline-line {
+        background-color: #fbbf24;
+      }
+
+      .timeline-card {
+        border-left-color: #fbbf24;
+      }
+
+      .timeline-badge {
+        background-color: #fef3c7;
+        color: #92400e;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Back Button -->
+    <div class="fixed top-6 left-6 z-50">
+      <button
+        onclick="window.location.href='../index.html#wisata'"
+        class="back-btn bg-black bg-opacity-20 text-white p-3 rounded-full shadow-lg hover:bg-opacity-30 flex items-center space-x-2 group"
+      >
+        <i data-feather="arrow-left" class="w-5 h-5"></i>
+        <span class="hidden group-hover:inline-block text-sm font-medium pr-2"
+          >Kembali</span
+        >
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden fortress-pattern"
+      id="hero-section"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center text-white mb-12">
+          <div class="scroll-reveal">
+            <div
+              class="inline-flex items-center justify-center w-20 h-20 bg-yellow-400 rounded-full mb-6 shadow-2xl"
+            >
+              <i data-feather="shield" class="w-10 h-10 text-gray-800"></i>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Benteng <span class="text-yellow-400">Bukit Kursi</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+              Benteng Pertahanan Strategis Kesultanan Riau-Lingga
+            </p>
+          </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="calendar"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">1784</h3>
+            <p class="opacity-80">Tahun Pembangunan</p>
+          </div>
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="target"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">12</h3>
+            <p class="opacity-80">Meriam Pertahanan</p>
+          </div>
+          <div
+            class="scroll-reveal glass-effect rounded-xl p-6 text-center text-white"
+          >
+            <i
+              data-feather="mountain"
+              class="w-8 h-8 text-yellow-400 mx-auto mb-3"
+            ></i>
+            <h3 class="text-2xl font-bold mb-2">45m</h3>
+            <p class="opacity-80">Ketinggian Bukit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Content -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- Introduction -->
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Sejarah <span class="strategic-highlight">Strategis</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Benteng Bukit Kursi merupakan salah satu benteng pertahanan terpenting dalam sistem pertahanan Kesultanan Riau-Lingga. Dibangun di atas bukit tertinggi Pulau Penyengat, benteng ini menjadi mata tombak pertahanan yang mengawasi seluruh perairan sekitar.
+            </p>
+          </div>
+
+          <div
+            class="scroll-reveal bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="bg-amber-500 p-3 rounded-full flex-shrink-0">
+                <i data-feather="eye" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">
+                  Posisi Strategis
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Terletak di puncak bukit setinggi 45 meter, benteng ini memberikan pandangan 360 derajat ke seluruh perairan. Dari sini, penjaga dapat mengawasi kapal-kapal yang melintas di Selat Bintan dan memberikan peringatan dini terhadap ancaman musuh.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Perjalanan <span class="strategic-highlight">Pertahanan</span>
+            </h2>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute left-8 top-0 bottom-0 w-0.5 timeline-line"
+            ></div>
+
+            <div class="space-y-12">
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1784</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Pembangunan Benteng
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Sultan Mahmud Riayat Syah memerintahkan pembangunan benteng sebagai bagian dari sistem pertahanan Pulau Penyengat. Lokasi dipilih karena posisinya yang strategis di puncak bukit tertinggi.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1787</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Penempatan Meriam
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    12 meriam besar ditempatkan di berbagai sudut benteng, memberikan jangkauan tembak yang luas untuk melindungi perairan sekitar dari serangan musuh.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1819</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Perlawanan Terhadap Belanda
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Benteng menjadi pusat perlawanan ketika Belanda mulai memperkuat cengkeramannya di wilayah Riau. Meriam-meriam benteng digunakan untuk mengusir kapal-kapal Belanda yang mencoba mendekati pulau.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1911</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Pengakhiran Fungsi Militer
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Setelah Kesultanan Riau-Lingga dihapuskan, benteng kehilangan fungsi militernya. Belanda mengambil alih dan sebagian meriam dipindahkan ke tempat lain.
+                  </p>
+                </div>
+              </div>
+
+              <div class="scroll-reveal timeline-item relative pl-20">
+                <div
+                  class="bg-white rounded-xl shadow-lg p-6 border-l-4 timeline-card"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="timeline-badge px-3 py-1 rounded-full text-sm font-semibold"
+                      >1970-Sekarang</span
+                    >
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-3">
+                    Cagar Budaya dan Wisata
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Benteng ditetapkan sebagai cagar budaya dan menjadi salah satu destinasi wisata sejarah di Pulau Penyengat. Reruntuhan benteng masih dapat dilihat hingga kini.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Defense System Section -->
+        <div class="max-w-6xl mx-auto">
+          <div class="scroll-reveal text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">
+              Sistem <span class="strategic-highlight">Pertahanan</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="scroll-reveal defense-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-red-500 to-red-600 p-6 text-center"
+              >
+                <i
+                  data-feather="target"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Meriam Benteng</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  12 meriam besar dengan kaliber berbeda ditempatkan strategis untuk melindungi perairan dari berbagai arah serangan musuh.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal defense-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-center"
+              >
+                <i
+                  data-feather="eye"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Pos Pengawasan</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Menara pengawasan tinggi memberikan pandangan luas ke semua arah, memungkinkan deteksi dini kapal-kapal yang mendekat.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal defense-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-gray-600 to-gray-700 p-6 text-center"
+              >
+                <i
+                  data-feather="shield"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Benteng Batu</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Dinding benteng dari batu karang dan kapur yang kokoh, mampu menahan serangan meriam dan memberikan perlindungan maksimal.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal defense-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-yellow-500 to-orange-500 p-6 text-center"
+              >
+                <i
+                  data-feather="radio"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Sistem Komunikasi</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Sistem beduk dan kentongan digunakan untuk menyebarkan sinyal peringatan ke seluruh pulau saat ada ancaman yang mendekat.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal defense-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-amber-500 to-amber-600 p-6 text-center"
+              >
+                <i
+                  data-feather="users"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Pasukan Pengawal</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Puluhan prajurit terpilih bertugas menjaga benteng 24 jam, terlatih dalam penggunaan meriam dan senjata tradisional.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="scroll-reveal defense-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-center"
+              >
+                <i
+                  data-feather="map"
+                  class="w-12 h-12 text-white mx-auto mb-3"
+                ></i>
+                <h3 class="text-xl font-bold text-white">Jalur Rahasia</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Terowongan bawah tanah menghubungkan benteng dengan istana, memungkinkan evakuasi darurat dan pasokan logistik.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategic Importance -->
+          <div class="scroll-reveal mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Pentingnya Strategis Benteng</h3>
+              <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Benteng Bukit Kursi bukan hanya sekadar bangunan pertahanan, tetapi juga simbol kedaulatan Kesultanan Riau-Lingga. Posisinya yang strategis menjadikannya kunci kontrol perdagangan di Selat Malaka.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold text-lg text-gray-800 mb-3">Kontrol Perdagangan</h4>
+                <p class="text-gray-600">Mengawasi dan mengontrol kapal-kapal dagang yang melintas di jalur perdagangan internasional Selat Malaka.</p>
+              </div>
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold text-lg text-gray-800 mb-3">Perlindungan Istana</h4>
+                <p class="text-gray-600">Melindungi istana Sultan dan pusat pemerintahan dari serangan musuh yang datang dari laut.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-gradient py-20 relative overflow-hidden">
+      <div class="absolute inset-0 fortress-pattern opacity-20"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="scroll-reveal">
+            <h2 class="text-4xl font-bold mb-6">
+              Jelajahi Benteng Bersejarah
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+              Saksikan sisa-sisa kejayaan sistem pertahanan Kesultanan Riau-Lingga dan nikmati pemandangan spektakuler dari puncak bukit
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <button
+                onclick="window.location.href='../index.html#wisata'"
+                class="bg-white text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg flex items-center space-x-2"
+              >
+                <i data-feather="map-pin" class="w-5 h-5"></i>
+                <span>Lihat Lokasi</span>
+              </button>
+              <button
+                onclick="window.location.href='../index.html#panduan'"
+                class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-colors duration-300 flex items-center space-x-2"
+              >
+                <i data-feather="info" class="w-5 h-5"></i>
+                <span>Panduan Kunjungan</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo & Description -->
+          <div class="md:col-span-2">
+            <div class="flex items-center mb-4">
+              <div class="bg-amber-500 p-2 rounded-lg mr-3">
+                <i data-feather="home" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold">Pulau Penyengat</h3>
+            </div>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Jelajahi warisan budaya Melayu yang kaya di Pulau Penyengat. Temukan sejarah, arsitektur, dan tradisi yang telah diwariskan turun-temurun.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-amber-500 transition-colors">
+                <i data-feather="youtube" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+            <ul class="space-y-2">
+              <li><a href="../index.html" class="text-gray-400 hover:text-amber-500 transition-colors">Beranda</a></li>
+              <li><a href="../index.html#tentang" class="text-gray-400 hover:text-amber-500 transition-colors">Tentang</a></li>
+              <li><a href="../index.html#wisata" class="text-gray-400 hover:text-amber-500 transition-colors">Destinasi</a></li>
+              <li><a href="../index.html#panduan" class="text-gray-400 hover:text-amber-500 transition-colors">Panduan</a></li>
+              <li><a href="../index.html#kontak" class="text-gray-400 hover:text-amber-500 transition-colors">Kontak</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i data-feather="map-pin" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">Pulau Penyengat, Tanjungpinang, Kepulauan Riau</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="phone" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">+62 771 123456</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i data-feather="mail" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                <span class="text-gray-400 text-sm">info@pulaupenyengat.id</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Pulau Penyengat. Semua hak dilindungi undang-undang.
+          </p>
+          <div class="flex space-x-6 text-sm">
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Kebijakan Privasi</a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+      // Initialize Feather Icons
+      feather.replace();
+
+      // Scroll reveal animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with scroll-reveal class
+      document.querySelectorAll(".scroll-reveal").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Staggered animation for timeline items
+      const timelineItems = document.querySelectorAll(".timeline-item");
+      timelineItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
+      });
+
+      // Staggered animation for defense cards
+      const defenseCards = document.querySelectorAll(".defense-card");
+      defenseCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Back button hover effect
+      const backBtn = document.querySelector(".back-btn");
+      backBtn.addEventListener("mouseenter", () => {
+        feather.replace();
+      });
+
+      // Modified parallax effect - reduced speed to prevent content overlap
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroSection = document.querySelector('#hero-section');
+        const rate = scrolled * -0.3; // Reduced from 0.5 to -0.3 and made negative
+        
+        if (heroSection && scrolled < window.innerHeight) {
+          heroSection.style.transform = `translateY(${rate}px)`;
+        }
+      });
+    </script>
+  </body>
+</html>
